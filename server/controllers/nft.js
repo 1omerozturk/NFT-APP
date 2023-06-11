@@ -1,11 +1,9 @@
-const NftSchema = require('../models/nft.js');
-
-
+const NftSchema=require("../models/nft")
 
 const getNfts= async(req,res)=>{
 try {
-    const getNfts=await NftSchema.find();
-    res.status(200).json(getNfts)
+       const nfts=await NftSchema.find();
+    res.json( nfts)
 }
  catch (error) {
     res.status(500).json({msg:error.message})

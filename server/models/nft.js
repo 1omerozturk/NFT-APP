@@ -2,21 +2,24 @@ const mongoose=require('mongoose')
 
 const NftSchema=new mongoose.Schema({
 
-    user:{
+    name:{
         type:String,
-        required:true,
+        trim:true,
+        require:true,
+
+    },
+    desc:{
+        type:String,
         trim:true
     },
-    description:{
-        type:String,
-        required:true,
-        trim:true
+    price:{
+        type:Number,
+        require:true,
     },
 
     imgurl:{
         type:String,
-        required:true,
-        unique:true
+        require:true
     },
     date:{
         type:Date,
