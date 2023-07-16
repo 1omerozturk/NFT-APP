@@ -28,6 +28,7 @@ try {
     const {id} =req.params;
     const nft=NftSchema.findById(id)
     res.status(200).json(nft)
+    console.log(nft)
 }
  catch (error) {
     res.status(500).json({msg:error.message})
