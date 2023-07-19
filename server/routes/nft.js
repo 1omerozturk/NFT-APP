@@ -6,7 +6,7 @@ const router=express.Router();
 
 router.get('/getNfts',getNfts)
 router.post('/createNft',createNft)
-router.get(`/getNft/`,getNft)
+router.get(`/getNft`,getNft)
 router.delete('/deleteNft',deleteNft)
 
 

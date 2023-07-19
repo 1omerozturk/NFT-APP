@@ -25,10 +25,10 @@ try {
 
 const getNft= async(req,res)=>{
 try {
-    const {id} =req.params;
-    const nft=NftSchema.findById(id)
-    res.status(200).json(nft)
-    console.log(nft)
+    const id =req.query.id;
+    const nft= await NftSchema.findById(id);
+    res.json(nft);
+
 }
  catch (error) {
     res.status(500).json({msg:error.message})
